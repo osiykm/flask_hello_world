@@ -1,8 +1,12 @@
 <html>
 <head>
-    <title>{{ title }} - Microblog</title>
+    {% if title %}
+        <title>{{ title }} - with tittle</title>
+    {% else %}
+        <title>Without title</title>
+    {% endif %}
 </head>
 <body>
- <h1>Hello, {{ user.username }}!</h1>
+<h1>Hello, {{ user.username }}!</h1>
 </body>
 </html>
